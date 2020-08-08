@@ -30,19 +30,21 @@
 		<spring-cloud.version>Hoxton.SR6</spring-cloud.version>
 
 		<curator.version>2.10.0</curator.version>
-		<fastjson.version>1.2.31</fastjson.version>
-		<ognl.version>3.2.9</ognl.version>
-		<velocity.version>2.0</velocity.version>
+		<fastjson.version>1.2.73</fastjson.version>
+		<ognl.version>3.2.14</ognl.version>
+		<velocity.version>2.2</velocity.version>
 		<thumbnailator.version>0.4.8</thumbnailator.version>
 		<javassist.version>3.11.0.GA</javassist.version>
 		<commons-lang.version>2.6</commons-lang.version>
 		<commons-collections.version>3.2.2</commons-collections.version>
-		<commons-io.version>2.4</commons-io.version>
-		<commons-codec.version>1.10</commons-codec.version>
-		<jasypt.version>1.9.2</jasypt.version>
-		<cglib.version>3.2.1</cglib.version>
-		<protostuff.version>1.5.3</protostuff.version>
+		<commons-io.version>2.7</commons-io.version>
+		<jasypt.version>1.9.3</jasypt.version>
+		<protostuff.version>1.7.2</protostuff.version>
 		<dom4j.version>1.6.1</dom4j.version>
+		<druid.version>1.1.23</druid.version>
+		<elastic-job-lite.version>2.1.6</elastic-job-lite.version>
+		<logstash-logback-encoder.version>6.4</logstash-logback-encoder.version>
+		<rocketmq.version>4.3.2</rocketmq.version>
 	</properties>
 
 	<dependencies>
@@ -57,6 +59,11 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
@@ -69,16 +76,6 @@
 				<scope>import</scope>
 			</dependency>
 			<dependency>
-				<groupId>org.apache.curator</groupId>
-				<artifactId>curator-framework</artifactId>
-				<version>${curator.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.apache.curator</groupId>
-				<artifactId>curator-recipes</artifactId>
-				<version>${curator.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>commons-lang</groupId>
 				<artifactId>commons-lang</artifactId>
 				<version>${commons-lang.version}</version>
@@ -89,14 +86,24 @@
 				<version>${commons-collections.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.apache.velocity</groupId>
-				<artifactId>velocity-engine-core</artifactId>
-				<version>${velocity.version}</version>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-framework</artifactId>
+				<version>${curator.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.curator</groupId>
+				<artifactId>curator-recipes</artifactId>
+				<version>${curator.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.velocity</groupId>
+				<artifactId>velocity-engine-core</artifactId>
+				<version>${velocity.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>ognl</groupId>
@@ -140,6 +147,32 @@
 				<groupId>dom4j</groupId>
 				<artifactId>dom4j</artifactId>
 				<version>${dom4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.dangdang</groupId>
+				<artifactId>elastic-job-lite-core</artifactId>
+				<version>${elastic-job-lite.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.dangdang</groupId>
+				<artifactId>elastic-job-lite-spring</artifactId>
+				<version>${elastic-job-lite.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.logstash.logback</groupId>
+				<artifactId>logstash-logback-encoder</artifactId>
+				<version>${logstash-logback-encoder.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.rocketmq</groupId>
+				<artifactId>rocketmq-client</artifactId>
+				<version>${rocketmq.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

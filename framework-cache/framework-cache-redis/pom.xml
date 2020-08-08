@@ -6,9 +6,6 @@
 		<version>3.5</version>
 	</parent>
 	<artifactId>framework-cache-redis</artifactId>
-	<properties>
-		<redis.version>2.9.0</redis.version>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>com.hbasesoft.framework</groupId>

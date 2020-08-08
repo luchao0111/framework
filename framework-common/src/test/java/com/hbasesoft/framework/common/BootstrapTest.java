@@ -5,9 +5,11 @@
  ****************************************************************************************/
 package com.hbasesoft.framework.common;
 
+import org.junit.runner.RunWith;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.test.context.junit4.SpringRunner;
 
 /**
  * <Description> 测试项目启动 <br>
@@ -19,7 +21,8 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @since V1.0<br>
  * @see com.hbasesoft.framework.common <br>
  */
-@SpringBootApplication
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = BootstrapTest.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class BootstrapTest {
 
     /**
