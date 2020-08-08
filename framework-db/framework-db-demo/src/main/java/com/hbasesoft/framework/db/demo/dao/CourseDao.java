@@ -18,6 +18,7 @@ import com.hbasesoft.framework.db.hibernate.IGenericBaseDao;
  * @since V1.0<br>
  * @see com.hbasesoft.framework.db.demo.dao <br>
  */
+@SuppressWarnings("deprecation")
 @Dao
 public interface CourseDao extends IGenericBaseDao {
 }

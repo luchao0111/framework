@@ -44,11 +44,6 @@ public class SqlLogFilter extends FilterEventAdapter {
     private ServiceLoader<TransLoggerService> transLoggerServices;
 
     /**
-     * dataSource
-     */
-    private DataSourceProxy dataSource;
-
-    /**
      * SqlLogFilter
      */
     public SqlLogFilter() {
@@ -63,7 +58,7 @@ public class SqlLogFilter extends FilterEventAdapter {
      */
     @Override
     public void init(final DataSourceProxy ds) {
-        this.dataSource = ds;
+        LoggerUtil.sqlLog("init-" + ds.getName());
     }
 
     /**

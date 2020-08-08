@@ -123,6 +123,7 @@ public final class RedisClientFactory {
      * @taskId <br>
      * @return <br>
      */
+    @SuppressWarnings("rawtypes")
     public static BinaryJedisCluster getBinaryJedisCluster() {
         synchronized (lock) {
             if (cluster == null) {

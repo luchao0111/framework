@@ -1,12 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.hbasesoft.framework</groupId>
 		<artifactId>framework</artifactId>
-		<version>3.4</version>
+		<version>3.5</version>
 	</parent>
 	<artifactId>framework-common</artifactId>
-  <version>3.4</version>
 	<name>${project.artifactId}</name>
 	<description>公共模块</description>
 	<properties>
@@ -25,6 +26,8 @@
 		<jasypt.version>1.9.2</jasypt.version>
 		<cglib.version>3.2.1</cglib.version>
 		<protostuff.version>1.5.3</protostuff.version>
+
+		<dom4j.version>1.6.1</dom4j.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -143,6 +146,13 @@
 		<dependency>
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
+			<version>${dom4j.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+		</dependency>
+
 	</dependencies>
 </project>

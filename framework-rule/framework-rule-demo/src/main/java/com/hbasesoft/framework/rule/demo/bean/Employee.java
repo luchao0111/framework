@@ -33,11 +33,6 @@ import lombok.Setter;
 @Entity(name = "Employee")
 public class Employee {
 
-    /**
-     * serialVersionUID <br>
-     */
-    private static final long serialVersionUID = -1869998461647323272L;
-
     /** ID */
     @Id
     @GeneratedValue(generator = "paymentableGenerator")
